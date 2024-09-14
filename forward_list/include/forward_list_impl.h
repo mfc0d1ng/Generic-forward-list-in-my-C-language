@@ -22,7 +22,7 @@ typedef struct std::forward_list<T>
 #end
 
 #macro forward_list<T>
-    forward_list##T
+    std::forward_list<T>
 #end
 
 #macro list::node <T>
