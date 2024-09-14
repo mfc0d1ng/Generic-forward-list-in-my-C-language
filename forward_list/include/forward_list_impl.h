@@ -1,7 +1,7 @@
 #ifndef FORWARD_LIST_IMPL_H
 #define FORWARD_LIST_IMPL_H
 
-#template struct::std::forward_list<T>
+#template struct::forward_list<T>
 typedef struct __attribute__((packed)) list::node<T>
 {
     T data;
