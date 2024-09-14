@@ -222,7 +222,7 @@ static
 void list::display<T>(const char* __fmt, const std::forward_list<T>* __list)
 {
     for (list::iterator<T> it = list::begin(__list); 
-                           it != list::end(__list);
+                           it != list::end();
                            it = it->next)
     {
         printf(__fmt, it->data);
