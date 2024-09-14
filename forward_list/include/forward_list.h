@@ -201,6 +201,7 @@ list::iterator<T> list::insert_after<T>(std::forward_list<T>* __list, list::iter
  * @param __list  Reference to a %forward_list object.
  */
 #macro list::size(__list)
+    list::_m_size(__list)
 #end
 
 /**
