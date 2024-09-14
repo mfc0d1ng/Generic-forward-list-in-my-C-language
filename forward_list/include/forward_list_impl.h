@@ -73,6 +73,10 @@ typedef struct std::forward_list<T>
     stdforward_list##T##_display
 #end
 
+#macro list::_m_size(__list)
+    ((__list)->size)
+#end
+
 
 void list::exit(const char* __errmsg)
 {
