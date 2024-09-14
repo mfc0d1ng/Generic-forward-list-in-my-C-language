@@ -15,23 +15,10 @@ typedef struct std::forward_list<T>
 #end
 
 #macro std::forward_list<T>
-    stdforward_list##T
+    forward_list##T
 #end
 
 #template forward_list<T>
-#end
-
-#template struct::forward_list<T>
-typedef struct __attribute__((packed)) list::node<T>
-{
-    T data;
-    struct list::node<T>* next;
-}list::node<T>;
-typedef struct forward_list<T>
-{
-    list::node<T>* head;
-    size_t size;
-}forward_list<T>;
 #end
 
 #macro forward_list<T>
@@ -39,7 +26,7 @@ typedef struct forward_list<T>
 #end
 
 #macro list::node <T>
-    stdFwdlistnode##T
+    Fwdlistnode##T
 #end
 
 #macro list::constructor()
@@ -47,7 +34,7 @@ typedef struct forward_list<T>
 #end
 
 #macro list::construct<T>
-    stdforward_list##T##_construct
+    forward_list##T##_construct
 #end
 
 #macro list::_m_before_begin(__list)
@@ -71,19 +58,19 @@ typedef struct forward_list<T>
 #end
 
 #macro list::push_front<T>
-    stdforward_list##T##_push_front
+    forward_list##T##_push_front
 #end
 
 #macro list::pop_front<T>
-    stdforward_list##T##_pop_front
+    forward_list##T##_pop_front
 #end
 
 #macro list::insert_after<T>
-    stdforward_list##T##_insert_after
+    forward_list##T##_insert_after
 #end
 
 #macro list::display<T>
-    stdforward_list##T##_display
+    forward_list##T##_display
 #end
 
 #macro list::_m_size(__list)
