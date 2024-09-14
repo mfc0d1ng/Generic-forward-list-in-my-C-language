@@ -215,19 +215,7 @@ list::iterator<T> list::insert_after<T>(std::forward_list<T>* __list, list::iter
  * user's responsibility.
  */
 #macro list::delete(__list)
-({
-    if(!list::empty(__list))
-    {
-        void* __temp = NULL;
-        while (!list::empty(__list))
-        {
-            __temp = list::begin(__list);
-            list::begin(__list) = list::begin(__list)->next;
-            free(__temp);
-        }
-        list::size(__list) = 0;
-    }
-})
+    list::_m_delete(__list)
 #end
 
 #template list::display<T>
