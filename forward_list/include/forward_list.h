@@ -82,20 +82,6 @@ std::forward_list<T> list::construct<T>(const T* __arr, size_t __size)
     list::_m_front(__list)
 #end
 
-/* Returns true if the %forward_list is empty. */
-#macro list::empty(__list)
-    (list::begin(__list) == NULL)
-#end
-
-/* 
- * @brief Returns the number of elements in the %forward_list.
- * @param __list  Reference to a %forward_list object.
- */
-#macro list::size(__list)
-    ((__list)->size)
-#end
-
-
 /**
  * @brief  Add data to the front of the %forward_list.
  * @param T       %forward list type.
@@ -203,6 +189,18 @@ list::iterator<T> list::insert_after<T>(std::forward_list<T>* __list, list::iter
     ++list::size(__list);
     return node;
 }
+#end
+
+/* Returns true if the %forward_list is empty. */
+#macro list::empty(__list)
+    (list::begin(__list) == NULL)
+#end
+
+/* 
+ * @brief Returns the number of elements in the %forward_list.
+ * @param __list  Reference to a %forward_list object.
+ */
+#macro list::size(__list)
 #end
 
 /**
