@@ -77,6 +77,21 @@ typedef struct std::forward_list<T>
     ((__list)->size)
 #end
 
+#macro list::_m_delete(__list)
+({
+    if(!list::empty(__list))
+    {
+        void* __temp = NULL;
+        while (!list::empty(__list))
+        {
+            __temp = list::begin(__list);
+            list::begin(__list) = list::begin(__list)->next;
+            free(__temp);
+        }
+        list::size(__list) = 0;
+    }
+})
+#end
 
 void list::exit(const char* __errmsg)
 {
