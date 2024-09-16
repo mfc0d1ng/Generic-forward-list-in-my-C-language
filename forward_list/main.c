@@ -19,7 +19,7 @@ int main(void)
     }
     puts("NULL\n");
     
-    list::delete(&list1);
+    list::clear(&list1);
 
 
     forward_list<double> list2 = list::new();
@@ -36,7 +36,7 @@ int main(void)
     }
     puts("NULL\n");
 
-    list::delete(&list2);
+    list::clear(&list2);
 
 
     forward_list<char> list3 = list::new();
@@ -55,7 +55,7 @@ int main(void)
     }
     puts("NULL\n");
 
-    list::delete(&list3);
+    list::clear(&list3);
 
 
     forward_list<const char *> list4 = list::new();
@@ -70,7 +70,7 @@ int main(void)
     }
     puts("NULL\n");
 
-    list::delete(&list4);
+    list::clear(&list4);
 
 
     forward_list<void *> list5 = list::new();
@@ -85,7 +85,7 @@ int main(void)
     }
     puts("NULL\n");
 
-    list::delete(&list5);
+    list::clear(&list5);
 
     return EXIT_SUCCESS;
 }
