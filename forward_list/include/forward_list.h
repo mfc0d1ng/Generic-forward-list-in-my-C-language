@@ -213,8 +213,12 @@ list::iterator<T> list::insert_after<T>(std::forward_list<T>* __list, list::iter
  * memory is not touched in any way. Managing the pointer is the
  * user's responsibility.
  */
+#macro list::clear(__list)
+    list::_m_clear(__list)
+#end
+
 #macro list::delete(__list)
-    list::_m_delete(__list)
+    list::_m_clear(__list)
 #end
 
 #template list::display<T>
