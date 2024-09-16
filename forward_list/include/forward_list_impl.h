@@ -94,10 +94,9 @@ typedef std::forward_list<T> forward_list<T>;
 })
 #end
 
-void list::exit(const char* __errmsg)
-{
+#macro list::exit(__errmsg)
     puts(__errmsg);
     exit(EXIT_FAILURE);
-}
+#end
 
 #endif
