@@ -78,7 +78,7 @@ typedef std::forward_list<T> forward_list<T>;
     ((__list)->size)
 #end
 
-#macro list::_m_delete(__list)
+#macro list::_m_clear(__list)
 ({
     if(!list::empty(__list))
     {
