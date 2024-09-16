@@ -1,6 +1,9 @@
 #ifndef FORWARD_LIST_IMPL_H
 #define FORWARD_LIST_IMPL_H
 
+#template forward_list<T>
+#end
+
 #template struct::forward_list<T>
 typedef struct __attribute__((packed)) list::node<T>
 {
@@ -12,17 +15,15 @@ typedef struct std::forward_list<T>
     list::node<T>* head;
     size_t size;
 }std::forward_list<T>;
+typedef std::forward_list<T> forward_list<T>;
 #end
 
-#macro std::forward_list<T>
-    forward_list##T
-#end
-
-#template forward_list<T>
+#macro std::forward_list<T> 
+    stdforward_list##T
 #end
 
 #macro forward_list<T>
-    std::forward_list<T>
+    forward_list##T
 #end
 
 #macro list::node <T>
