@@ -33,16 +33,16 @@
 static
 std::forward_list<T> list::construct<T>(const T* __arr, size_t __size)
 {
-    std::forward_list<T> new = list::new();
+    std::forward_list<T> __new = list::new();
     if(!__arr)
     { 
-        return new;
+        return __new;
     }
     for (size_t i = __size; i > 0; )
     {
-        list::push_front<T>(&new, __arr[--i]);
+        list::push_front<T>(&__new, __arr[--i]);
     }
-    return new;
+    return __new;
 }
 #end
 
