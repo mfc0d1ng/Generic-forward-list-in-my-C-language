@@ -27,7 +27,7 @@ typedef std::forward_list<T> forward_list<T>;
 #end
 
 #macro list::node <T>
-    list_node_##T
+    listnode##T
 #end
 
 #macro list::constructor()
@@ -35,7 +35,7 @@ typedef std::forward_list<T> forward_list<T>;
 #end
 
 #macro list::construct<T>
-    std_list_construct_##T
+    listconstruct##T
 #end
 
 #macro list::_m_before_begin(__list)
@@ -59,19 +59,19 @@ typedef std::forward_list<T> forward_list<T>;
 #end
 
 #macro list::push_front<T>
-    std_list_push_front_##T
+    listpush_front##T
 #end
 
 #macro list::pop_front<T>
-    std_list_pop_front_##T
+    listpop_front##T
 #end
 
 #macro list::insert_after<T>
-    std_list_insert_after_##T
+    listinsert_after##T
 #end
 
 #macro list::display<T>
-    std_list_display_##T
+    listdisplay##T
 #end
 
 #macro list::_m_size(__list)
